@@ -20,10 +20,10 @@ public class frames {
 		Actions a = new Actions(driver);
 		a.dragAndDrop(driver.findElement(By.id("draggable")), driver.findElement(By.id("droppable"))).build().perform();
 		
-		
+		driver.switchTo().defaultContent();
 		
 //		driver.findElement(By.id("draggable")).click(); 
-//		driver.quit();
+		driver.quit();
 
 	}
 
