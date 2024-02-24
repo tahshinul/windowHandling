@@ -16,12 +16,11 @@ public class frames {
 		driver.manage().window().maximize();
 		driver.get("http://jqueryui.com/droppable/");
 		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@class='demo-frame']")));
-		
+
 		Actions a = new Actions(driver);
 		a.dragAndDrop(driver.findElement(By.id("draggable")), driver.findElement(By.id("droppable"))).build().perform();
-		
 		driver.switchTo().defaultContent();
-		
+
 //		driver.findElement(By.id("draggable")).click(); 
 		driver.quit();
 
